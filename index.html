@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+	WaluigiBSOD
+
+	waluigibsod.github.io
+-->
+
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title id="page-title">Now Loading ...</title>
+	</head>
+	
+	<meta charset="utf-8"/>
+	
+	<body>
+		<h1 id="title"">Now Loading</h1>
+
+		<h2 id="version" onmouseenter="_SetVersionDate()" onmouseleave="_SetVersion()">...</h2>
+		
+		<br>
+		
+		<br>
+		
+		<script type="text/javascript" src="js/constants.js"></script>
+		
+		<script type="text/javascript" src="js/flags.js"></script>
+		
+		<script type="text/javascript" src="js/io.js"></script>
+		
+		<script type="text/javascript" src="js/check.js"></script>
+		
+		<script type="text/javascript" src="js/format.js"></script>
+		
+		<script type="text/javascript" src="js/decoder.js"></script>
+		
+		<div align="center" class="main">
+			
+			<input type="text" autocomplete="off" id="code" class="code" size="30" maxlength="16" onclick="_ResetInput()" oninput="_CheckPassword()" value=""></input>
+			<p id="error" class="error"><br>Enter password</p>
+			
+			<table id="result" class="result" style="visibility: hidden;">
+			</table>
+			
+		</div>
+		
+		<script type="text/javascript" src="js/result.js"></script>
+		
+		<script type="text/javascript" src="js/info.js"></script>
+	
+	</body>
+</html>
