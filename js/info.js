@@ -20,8 +20,8 @@
 
 const Title = "Mario Kart: Double Dash!! Password Decoder";
 
-const Version = "1.0";
-const VersionDate = "7 February 2021";
+const Version = "1.0.1";
+const VersionDate = "8 February 2021";
 
 // Functions
 

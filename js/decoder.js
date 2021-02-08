@@ -40,6 +40,8 @@ function _DecodePassword(Password = "") {
 		var DriverX = 0;
 		var DriverY = 0;
 		var RaceTrack = 0;
+		var RaceTrackName = 0;
+		var RaceTrackLaps = 0;
 		var TotalTime = 0;
 		
 		var CheckSum;
@@ -125,6 +127,9 @@ function _DecodePassword(Password = "") {
 		//
 		// There is also a bug: if total time exceeds 08 : 44 . 287, count
 		// overflows and restarts from 00 : 00 . 000
+		//
+		// It's mitigated in-game by not allowing to generate codes where
+		// this condition is met.
 		
 		TotalTime = (DecodedData[0] << 11) | (DecodedData[1] << 3) | (DecodedData[2] >> 5);
 		
@@ -136,6 +141,8 @@ function _DecodePassword(Password = "") {
 		// from the 2nd bit from LSB (Least Significant Bit).
 		//
 		// Also best lap time overflows, at 04 : 22 . 143 instead.
+		//
+		// It's mitigated in the same way of the precedent value.
 		
 		BestLapTime = (DecodedData[4] << 10) | (DecodedData[5] << 2) | (DecodedData[6] >> 6);
 		
@@ -145,8 +152,8 @@ function _DecodePassword(Password = "") {
 		
 		// CheckSum (calculated)
 		
-		Temporary = (DecodedData[2] >> 2) & 3;
-		Temporary += (DecodedData[2] >> 4) & 1;
+		Temporary = (DecodedData[2] >> 2) & 0x3;
+		Temporary += (DecodedData[2] >> 4) & 0x1;
 		Temporary += RaceTrack;
 		Temporary += Kart;
 		Temporary += DriverX;
@@ -169,8 +176,11 @@ function _DecodePassword(Password = "") {
 				return;
 			}
 			
-			document.getElementById("track-name").innerHTML = RaceTracks[RaceTrack][0];
-			document.getElementById("track-laps").innerHTML = RaceTracks[RaceTrack][1];
+			RaceTrackName = RaceTracks[RaceTrack][0];
+			RaceTrackLaps = RaceTracks[RaceTrack][1];
+			
+			document.getElementById("track-name").innerHTML = RaceTrackName;
+			document.getElementById("track-laps").innerHTML = RaceTrackLaps;
 			
 			// Kart
 			
@@ -214,12 +224,11 @@ function _DecodePassword(Password = "") {
 			
 			// Best Lap Time
 			
-			// Note
-			//
-			// In the SWF decoder, the total number of laps of each track is left unused.
-			// I think it was meant to be used to perform a validity check like this one.
-			
-			if ((BestLapTime * RaceTracks[RaceTrack][1]) > TotalTime) {
+			if ((BestLapTime * RaceTrackLaps) > TotalTime) {
+				// Note
+				//
+				// In the SWF decoder, the total number of laps of each track is left unused.
+				// I think it was meant to be used to perform a validity check like this one.
 				
 				_WriteError("Invalid Best Lap Time");
 				
