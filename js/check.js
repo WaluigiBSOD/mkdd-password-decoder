@@ -25,7 +25,7 @@ function _CheckPassword() {
 	Password = Password.toUpperCase();
 	
 	for (var i=0;i<Password.length;i++)
-		if (PasswordCharacters.indexOf(Password.charAt(i)) == -1) {
+		if (PasswordCharacterTable.indexOf(Password.charAt(i)) == -1) {
 			Password = Password.replace(Password.charAt(i),"");
 			
 			PasswordChanged = true;

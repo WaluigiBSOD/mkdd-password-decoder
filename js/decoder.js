@@ -52,7 +52,7 @@ function _DecodePassword(Password = "") {
 		// Character-to-decimal digit conversion
 
 		for (var i=0;i<16;i++) {
-			Temporary = PasswordCharactersTable.indexOf(Password.charAt(i));
+			Temporary = PasswordCharacterTable.indexOf(Password.charAt(i));
 			
 			if (Temporary > -1)
 				PasswordBuffer[i] = Temporary;
@@ -125,11 +125,7 @@ function _DecodePassword(Password = "") {
 		// If you don't do this, you put 5 always-zero bits starting from
 		// the 3rd bit from LSB (Least Significant Bit).
 		//
-		// There is also a bug: if total time exceeds 08 : 44 . 287, count
-		// overflows and restarts from 00 : 00 . 000
-		//
-		// It's mitigated in-game by not allowing to generate codes where
-		// this condition is met.
+		// If total time exceeds 08 : 44 . 287, the game refuses to generate a code.
 		
 		TotalTime = (DecodedData[0] << 11) | (DecodedData[1] << 3) | (DecodedData[2] >> 5);
 		
@@ -140,9 +136,8 @@ function _DecodePassword(Password = "") {
 		// In this case the always-zero gap is 6 bits long and starts
 		// from the 2nd bit from LSB (Least Significant Bit).
 		//
-		// Also best lap time overflows, at 04 : 22 . 143 instead.
-		//
-		// It's mitigated in the same way of the precedent value.
+		// Also here, if best lap time exceeds 04 : 22 . 143, the game refuses
+		// to generate a code.
 		
 		BestLapTime = (DecodedData[4] << 10) | (DecodedData[5] << 2) | (DecodedData[6] >> 6);
 		

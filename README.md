@@ -7,7 +7,7 @@ JavaScript port of [an Adobe Flash application](http://www.fastswf.com/IA9lJeQ) 
 4. Enter the password (e.g. `EDJFK4NSYQ4PAKOI`).
 5. Read the decoded info.
 
-More info [on TCRF](https://tcrf.net/Mario_Kart:_Double_Dash!!#Japanese_Contest_Code).
+More info [on TCRF](https://tcrf.net/Mario_Kart:_Double_Dash!!#Contest_Code).
 ## Program
 The JavaScript source code derives from [Version 1.2.3](https://github.com/WaluigiBSOD/dm64-password-decoder/releases/tag/1.2.3) of [Dr. Mario 64 Password Decoder](https://github.com/WaluigiBSOD/dm64-password-decoder/), another tool I wrote.
 Obviously the decoding algorithm is not the same.

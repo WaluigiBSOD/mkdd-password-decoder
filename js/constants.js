@@ -18,9 +18,7 @@
 
 // Constants
 
-const PasswordCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ345678";
-
-const PasswordCharactersTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";
+const PasswordCharacterTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";
 
 const KartNames = [
 	"Red Fire",
