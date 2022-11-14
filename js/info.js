@@ -20,13 +20,12 @@
 
 const Title = "Mario Kart: Double Dash!! Password Decoder";
 
-const Version = "1.0.5";
-const VersionDate = "31 March 2022";
+const Version = "1.0.6";
+const VersionDate = "14 November 2022";
 
 // Functions
 
 function _SetTitle() {
-	document.getElementById("page-title").innerHTML = Title;
 	document.getElementById("title").innerHTML = Title;
 }
 
