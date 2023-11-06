@@ -18,7 +18,7 @@
 
 // Constants
 
-const PasswordCharacterTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";
+const PasswordCharacterTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";		// 345678ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 const KartNames = [
 	"Red Fire",
@@ -48,71 +48,87 @@ const KartNames = [
 // Race Track Entry Format
 //
 // 0: Name
-// 1: Number of laps
+// 1: Total number of laps
 
 const RaceTracks = [
 	[
-		"Luigi Circut", 3
+		"Luigi Circut",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Peach Beach", 3
+		"Peach Beach",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Baby Park", 7
+		"Baby Park",			// Name
+		7						// Total number of laps
 	],
 	
 	[
-		"Dry Dry Desert", 3
+		"Dry Dry Desert",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Mushroom Bridge", 3
+		"Mushroom Bridge",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Mario Circut", 3
+		"Mario Circut",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Daisy Cruiser", 3
+		"Daisy Cruiser",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Waluigi Stadium", 3
+		"Waluigi Stadium",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Sherbet Land", 3
+		"Sherbet Land",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Mushroom City", 3
+		"Mushroom City",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Yoshi Circut", 3
+		"Yoshi Circut",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"DK Mountain", 3
+		"DK Mountain",			// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Wario Colosseum", 2
+		"Wario Colosseum",		// Name
+		2						// Total number of laps
 	],
 	
 	[
-		"Dino Dino Jungle", 3
+		"Dino Dino Jungle",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Bowser\'s Castle", 3
+		"Bowser\'s Castle",		// Name
+		3						// Total number of laps
 	],
 	
 	[
-		"Rainbow Road", 3
+		"Rainbow Road",			// Name
+		3						// Total number of laps
 	]
 ];
 
@@ -144,8 +160,10 @@ const CharacterNames = [
 //
 // For some reason character numbering starts from 1 instead of 0,
 // and an extra kart is mentioned in the Flash-based decoder.
+//
 // Zeroth character is named "Racer 0" and the extra kart "Cart 21" (sic).
-// As they're not used under normal circumstances, I've blanked out them
+//
+// As they're not used under normal circumstances, I've blanked out them.
 
 const KartMinimum = 0;
 const KartMaximum = 20;
@@ -160,34 +178,54 @@ const RaceTrackMaximum = 15;
 //
 // 0: Caption
 // 1: Caption ID (optional)
-// 2: ID of the area to be filled by the decoder
+// 2: Area ID (to be filled by the decoder)
 
 const ResultEntries = [
 	[
-		"Track", "", "track-name"
+		"Track",					// Caption
+		"",							// Caption ID
+		"track-name"				// Area ID
 	],
 	
 	[
-		"Total Laps in Track", "", "track-laps"
+		"",							// Caption
+		"",							// Caption ID
+		""							// Area ID
 	],
 	
 	[
-		"Kart", "", "kart"
+		"Total Time",				// Caption
+		"",							// Caption ID
+		"time-total"				// Area ID
 	],
 	
 	[
-		"Driver #1", "", "driverX"
+		"Best Lap Time",			// Caption
+		"",							// Caption ID
+		"time-lap"					// Area ID
 	],
 	
 	[
-		"Driver #2", "", "driverY"
+		"",							// Caption
+		"",							// Caption ID
+		""							// Area ID
 	],
 	
 	[
-		"Total Time", "", "time-total"
+		"Kart",						// Caption
+		"",							// Caption ID
+		"kart"						// Area ID
 	],
 	
 	[
-		"Best Lap Time", "", "time-lap"
+		"Driver #1",				// Caption
+		"",							// Caption ID
+		"driverX"					// Area ID
+	],
+	
+	[
+		"Driver #2",				// Caption
+		"",							// Caption ID
+		"driverY"					// Area ID
 	]
 ];

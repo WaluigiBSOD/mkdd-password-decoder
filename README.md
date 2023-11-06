@@ -16,7 +16,7 @@ More info [on TCRF](https://tcrf.net/Mario_Kart:_Double_Dash!!#Contest_Code).
 
 It's basically a fork of [Version 1.2.3](https://github.com/WaluigiBSOD/dm64-password-decoder/releases/tag/1.2.3) of [Dr. Mario 64 Password Decoder](https://github.com/WaluigiBSOD/dm64-password-decoder/), another tool I wrote. Obviously the decoding algorithm is not the same.
 
-The Adobe Flash tool was hosted on [FastSWF](https://www.fastswf.com/IA9lJeQ), but since now it's no longer available, the mirror inside this repository it's linked in the description instead.
+The Adobe Flash tool was hosted on [FastSWF](https://www.fastswf.com/IA9lJeQ) of apparent unknown authorship, but since now it's no longer available, the mirror inside this repository it's linked in the description instead.
 
 ## License
 
