@@ -18,15 +18,8 @@
 
 // Functions
 
-function _DecodePassword(Password = "") {
+function _DecodePassword(Password) {
 	ValidPassword = false;
-	
-	if (Password == "")
-		Password = document.getElementById("code").value;
-	
-	Password = Password.toUpperCase();
-	
-	document.getElementById("code").value = Password;
 	
 	if (Password.length == 16) {
 		var PasswordBuffer = Array(16).fill(0);
@@ -237,17 +230,8 @@ function _DecodePassword(Password = "") {
 			_ShowResult();
 			
 			ValidPassword = true;
-		} else {
+		} else
 			_WriteError("Invalid checksum");
-			
-			return;
-		}
-		
-	} else {
-		document.getElementById("code").value = document.getElementById("code").value.toUpperCase();
-		
+	} else
 		_WriteError("Enter password",true);
-		
-		return;
-	}
 }
