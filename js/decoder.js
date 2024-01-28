@@ -171,6 +171,8 @@ function _DecodePassword(Password) {
 			
 			// Driver #1
 			
+			DriverX--;
+			
 			if (DriverX < DriverMinimum || DriverX > DriverMaximum) {
 				_WriteError("Invalid Driver #1");
 				
@@ -180,6 +182,8 @@ function _DecodePassword(Password) {
 			document.getElementById("driverX").innerHTML = CharacterNames[DriverX];
 			
 			// Driver #2
+			
+			DriverY--;
 			
 			if (DriverY < DriverMinimum || DriverY > DriverMaximum) {
 				_WriteError("Invalid Driver #2");

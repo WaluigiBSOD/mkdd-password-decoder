@@ -25,14 +25,14 @@ const KartNames = [
 	"DK Jumbo",
 	"Turbo Yoshi",
 	"Koopa Dasher",
-	"Hearth Coach",
+	"Heart Coach",
 	"Goo-Goo Buggy",
 	"Wario Car",
 	"Koopa King",
 	"Green Fire",
 	"Barrel Train",
 	"Turbo Birdo",
-	"Para Wing",
+	"Para-Wing",
 	"Bloom Coach",
 	"Rattle Buggy",
 	"Waluigi Racer",
@@ -41,8 +41,7 @@ const KartNames = [
 	"Toadette Kart",
 	"Boo Pipes",
 	"Piranha Pipes",
-	"Parade Kart",
-	""
+	"Parade Kart"
 ];
 
 // Race Track Entry Format
@@ -52,7 +51,7 @@ const KartNames = [
 
 const RaceTracks = [
 	[
-		"Luigi Circut",			// Name
+		"Luigi Circuit",		// Name
 		3						// Total number of laps
 	],
 	
@@ -77,7 +76,7 @@ const RaceTracks = [
 	],
 	
 	[
-		"Mario Circut",			// Name
+		"Mario Circuit",		// Name
 		3						// Total number of laps
 	],
 	
@@ -102,7 +101,7 @@ const RaceTracks = [
 	],
 	
 	[
-		"Yoshi Circut",			// Name
+		"Yoshi Circuit",		// Name
 		3						// Total number of laps
 	],
 	
@@ -133,11 +132,10 @@ const RaceTracks = [
 ];
 
 const CharacterNames = [
-	"",
 	"Baby Mario",
 	"Baby Luigi",
 	"Paratroopa",
-	"Koopa Troopa",
+	"Koopa",
 	"Peach",
 	"Daisy",
 	"Mario",
@@ -146,12 +144,12 @@ const CharacterNames = [
 	"Waluigi",
 	"Yoshi",
 	"Birdo",
-	"DK",
+	"Donkey Kong",
 	"Diddy Kong",
 	"Bowser",
 	"Bowser Jr.",
 	"Toad",
-	"Toadete",
+	"Toadette",
 	"King Boo",
 	"Petey Piranha"
 ];
@@ -168,8 +166,8 @@ const CharacterNames = [
 const KartMinimum = 0;
 const KartMaximum = 20;
 
-const DriverMinimum = 1;
-const DriverMaximum = 20;
+const DriverMinimum = 0;
+const DriverMaximum = 19;
 
 const RaceTrackMinimum = 0;
 const RaceTrackMaximum = 15;
