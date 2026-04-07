@@ -8,7 +8,7 @@ It's basically a fork of [Version 1.2.3](https://github.com/WaluigiBSOD/dm64-pas
 
 [The Adobe Flash application that I used as a base](https://github.com/WaluigiBSOD/mkdd-password-decoder/raw/master/swf/IA9lJeQ.swf) was made by [Henke37](https://github.com/henke37), using itself as a base a reverse-engineering of the algorithm from the game made by a person he forgot the name.
 
-### Obtaining A Password In-Game
+### Obtaining a Password In-Game
 
 After completing a race in Time Trials mode press in sequence **L**, **R**, **L**, **R**, **X**, **Y**, **X**, **Y** and **Z** on the Retry screen.
 
