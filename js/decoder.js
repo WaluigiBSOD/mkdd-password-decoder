@@ -45,7 +45,7 @@ function _DecodePassword(Password) {
 		// Character-to-decimal digit conversion
 
 		for (var i=0;i<16;i++) {
-			Temporary = PasswordCharacterTable.indexOf(Password.charAt(i));
+			Temporary = PasswordCharactersTable.indexOf(Password.charAt(i));
 			
 			if (Temporary > -1)
 				PasswordBuffer[i] = Temporary;
@@ -69,8 +69,7 @@ function _DecodePassword(Password) {
         DecodedData[8] = ((PasswordBuffer[12] << 7) | (PasswordBuffer[13] << 2) + (PasswordBuffer[14] >> 3)) & 0xFF;
         DecodedData[9] = ((PasswordBuffer[14] << 5) | PasswordBuffer[15]) & 0xFF;
 		
-		// This way of scrambling things is pretty weird (considering
-		// also that the alphabet is shuffled).
+		// This way of scrambling things is pretty weird (considering also that the alphabet is shuffled).
 		
 		X = (DecodedData[8] << 8) | DecodedData[9];
 		
@@ -148,8 +147,8 @@ function _DecodePassword(Password) {
 		if (Checksum == TestChecksum) {
 			// Race Track
 			
-			if (RaceTrack < RaceTrackMinimum || RaceTrack > RaceTrackMaximum) {
-				_WriteError("Invalid Race Track");
+			if (RaceTrack > RaceTrackMaximum) {
+				_WriteError("Invalid race track");
 				
 				return;
 			}
@@ -161,8 +160,8 @@ function _DecodePassword(Password) {
 			
 			// Kart
 			
-			if (Kart < KartMinimum || Kart > KartMaximum) {
-				_WriteError("Invalid Kart");
+			if (Kart > KartMaximum) {
+				_WriteError("Invalid kart");
 				
 				return;
 			}
@@ -173,8 +172,8 @@ function _DecodePassword(Password) {
 			
 			DriverX--;
 			
-			if (DriverX < DriverMinimum || DriverX > DriverMaximum) {
-				_WriteError("Invalid Driver #1");
+			if (DriverX > DriverMaximum) {
+				_WriteError("Invalid driver #1");
 				
 				return;
 			}
@@ -185,17 +184,16 @@ function _DecodePassword(Password) {
 			
 			DriverY--;
 			
-			if (DriverY < DriverMinimum || DriverY > DriverMaximum) {
-				_WriteError("Invalid Driver #2");
+			if (DriverY > DriverMaximum) {
+				_WriteError("Invalid driver #2");
 				
 				return;
 			}
 			
 			if (DriverX == DriverY) {
-				// Nowhere in the game is possible to drive with the same character
-				// twice on a kart without cheating.
+				// Nowhere in the game is possible to drive with the same character twice on a kart without cheating.
 				
-				_WriteError("Driver #1 and Driver #2 cannot be the same");
+				_WriteError("Driver #1 and driver #2 cannot be the same");
 				
 				return;
 			}
@@ -220,7 +218,7 @@ function _DecodePassword(Password) {
 				// by comparing them each other, doesn't check them against e.g. an absolute lower bound of
 				// times obtainable without cheating.
 				
-				_WriteError("Invalid Best/Total Lap Time(s)");
+				_WriteError("Invalid Best/Total lap time(s)");
 				
 				return;
 			}

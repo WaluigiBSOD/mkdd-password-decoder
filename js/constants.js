@@ -18,7 +18,7 @@
 
 // Constants
 
-const PasswordCharacterTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";		// 345678ABCDEFGHIJKLMNOPQRSTUVWXYZ
+const PasswordCharactersTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";		// 345678ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 const KartNames = [
 	"Red Fire",
@@ -163,13 +163,10 @@ const CharacterNames = [
 //
 // As they're not used under normal circumstances, I've blanked out them.
 
-const KartMinimum = 0;
-const KartMaximum = 20;
+const KartMaximum =      20;
 
-const DriverMinimum = 0;
-const DriverMaximum = 19;
+const DriverMaximum =    19;
 
-const RaceTrackMinimum = 0;
 const RaceTrackMaximum = 15;
 
 // Result Table Entry Format

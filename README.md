@@ -2,25 +2,25 @@
 
 JavaScript port of [an Adobe Flash application](https://github.com/WaluigiBSOD/mkdd-password-decoder/raw/master/swf/IA9lJeQ.swf) that decodes Mario Kart: Double Dash!! Time Trials contest passwords.
 
-## How to use
-
-1. Play Mario Kart: Double Dash!! and, after completing a race in Time Trials mode, press in sequence **L, R, L, R, X, Y, X, Y, Z** when the options menu is on-screen.
-2. Write down the displayed password on the bottom of the screen.
-3. Open [https://waluigibsod.github.io/mkdd-password-decoder/](https://waluigibsod.github.io/mkdd-password-decoder/).
-4. Enter the password (e.g. `45CJNO5CJILF88Z3`).
-5. Read the decoded info.
-
-More info [on TCRF](https://tcrf.net/Mario_Kart:_Double_Dash!!#Contest_Code).
-
 ## Program
 
 It's basically a fork of [Version 1.2.3](https://github.com/WaluigiBSOD/dm64-password-decoder/releases/tag/1.2.3) of [Dr. Mario 64 Password Decoder](https://github.com/WaluigiBSOD/dm64-password-decoder/), another tool I wrote. Obviously the decoding algorithm is not the same.
 
-[The Adobe Flash application that I used as a base](https://github.com/WaluigiBSOD/mkdd-password-decoder/raw/master/swf/IA9lJeQ.swf) was made by Henke37, using in this case as a base a reverse-engineering of the algorithm from the game made by a person he forgot the name.
+[The Adobe Flash application that I used as a base](https://github.com/WaluigiBSOD/mkdd-password-decoder/raw/master/swf/IA9lJeQ.swf) was made by [Henke37](https://github.com/henke37), using itself as a base a reverse-engineering of the algorithm from the game made by a person he forgot the name.
+
+### Obtaining A Password In-Game
+
+After completing a race in Time Trials mode press in sequence **L**, **R**, **L**, **R**, **X**, **Y**, **X**, **Y** and **Z** on the Retry screen.
+
+More info is available [on TCRF](https://tcrf.net/Mario_Kart:_Double_Dash!!#Contest_Code).
+
+### Ports
+
+A third-party [Rust crate port](https://github.com/tpglitch/mkdd-decoder-rs) that is part [of another one](https://github.com/tpglitch/mkdedede) that also decodes Mario Kart DS Time Trials passwords exists, both made by [tpglitch](https://github.com/tpglitch).
 
 ## License
 
-The source code is released under the GNU General Public License v 3.0 (see [LICENSE](https://github.com/WaluigiBSOD/mkdd-password-decoder/blob/master/LICENSE) in the root of the repository for a copy of the license and for more information).
+The source code is released under the GNU General Public License v 3.0 (see [`LICENSE`](https://github.com/WaluigiBSOD/mkdd-password-decoder/blob/master/LICENSE) in the root of the repository for a copy of the license and for more information).
 
 ### Disclaimer
 
