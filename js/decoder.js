@@ -147,7 +147,7 @@ function _DecodePassword(Password) {
 		if (Checksum == TestChecksum) {
 			// Race Track
 			
-			if (RaceTrack > RaceTrackMaximum) {
+			if (RaceTrack >= RaceTracks.length) {
 				_WriteError("Invalid race track");
 				
 				return;
@@ -160,7 +160,7 @@ function _DecodePassword(Password) {
 			
 			// Kart
 			
-			if (Kart > KartMaximum) {
+			if (Kart >= KartNames.length) {
 				_WriteError("Invalid kart");
 				
 				return;
@@ -172,7 +172,7 @@ function _DecodePassword(Password) {
 			
 			DriverX--;
 			
-			if (DriverX > DriverMaximum) {
+			if (DriverX >= CharacterNames.length) {
 				_WriteError("Invalid driver #1");
 				
 				return;
@@ -184,7 +184,7 @@ function _DecodePassword(Password) {
 			
 			DriverY--;
 			
-			if (DriverY > DriverMaximum) {
+			if (DriverY >= CharacterNames.length) {
 				_WriteError("Invalid driver #2");
 				
 				return;

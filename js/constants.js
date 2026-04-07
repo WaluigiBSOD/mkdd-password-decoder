@@ -20,6 +20,15 @@
 
 const PasswordCharactersTable = "G6EQTXYN4WRHBFKOIJAPCD5S8V7UZ3LM";		// 345678ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
+// Oddities
+//
+// For some reason character numbering starts from 1 instead of 0,
+// and an extra kart is mentioned in the Flash-based decoder.
+//
+// Zeroth character is named "Racer 0" and the extra kart "Cart 21" (sic).
+//
+// As they're not used under normal circumstances, I've blanked out them.
+
 const KartNames = [
 	"Red Fire",
 	"DK Jumbo",
@@ -153,21 +162,6 @@ const CharacterNames = [
 	"King Boo",
 	"Petey Piranha"
 ];
-
-// Oddities
-//
-// For some reason character numbering starts from 1 instead of 0,
-// and an extra kart is mentioned in the Flash-based decoder.
-//
-// Zeroth character is named "Racer 0" and the extra kart "Cart 21" (sic).
-//
-// As they're not used under normal circumstances, I've blanked out them.
-
-const KartMaximum =      20;
-
-const DriverMaximum =    19;
-
-const RaceTrackMaximum = 15;
 
 // Result Table Entry Format
 //
