@@ -147,12 +147,6 @@ function _DecodePassword(Password) {
 		if (Checksum == TestChecksum) {
 			// Race Track
 			
-			if (RaceTrack >= RaceTracks.length) {
-				_WriteError("Invalid race track");
-				
-				return;
-			}
-			
 			RaceTrackName = RaceTracks[RaceTrack][0];
 			RaceTrackLaps = RaceTracks[RaceTrack][1];
 			
